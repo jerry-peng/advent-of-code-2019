@@ -1,14 +1,14 @@
-mod days;
-use days::day1::Day1;
-use days::problem::Problem;
+use aoc_2019::days::problem::Problem;
+use aoc_2019::days::*;
 use std::env;
 
 fn main() {
     let day = parse_arg();
-    let problem: Box<dyn Problem> = Box::new(match day {
-        1 => Day1 { day },
+    let problem: Box<dyn Problem> = match day {
+        1 => Box::new(Day1 {}),
+        2 => Box::new(Day2 {}),
         _ => unreachable!("Day must be between 1 and 25 inclusive"),
-    });
+    };
 
     println!("Part 1 result: {}", problem.part_one());
     println!("Part 2 result: {}", problem.part_two());

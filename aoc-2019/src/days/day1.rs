@@ -1,13 +1,11 @@
 use super::inputs::read_day_input;
 use super::problem::Problem;
 
-pub struct Day1 {
-    pub day: usize,
-}
+pub struct Day1 {}
 
 impl Problem for Day1 {
     fn part_one(&self) -> String {
-        let input = read_day_input(self.day);
+        let input = read_day_input(1);
         let total_module_mass: usize = input
             .lines()
             .map(|line| str::parse::<usize>(line).unwrap())
@@ -17,7 +15,7 @@ impl Problem for Day1 {
     }
 
     fn part_two(&self) -> String {
-        let input = read_day_input(self.day);
+        let input = read_day_input(1);
         let module_masses: Vec<usize> = input
             .lines()
             .map(|line| str::parse::<usize>(line).unwrap())
