@@ -8,6 +8,7 @@ fn main() {
         1 => Box::new(Day1 {}),
         2 => Box::new(Day2 {}),
         3 => Box::new(Day3 {}),
+        4 => Box::new(Day4 {}),
         _ => unreachable!("Day must be between 1 and 25 inclusive"),
     };
 

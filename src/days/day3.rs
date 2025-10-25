@@ -1,5 +1,3 @@
-use std::vec;
-
 use super::inputs::read_day_input;
 use super::problem::Problem;
 
